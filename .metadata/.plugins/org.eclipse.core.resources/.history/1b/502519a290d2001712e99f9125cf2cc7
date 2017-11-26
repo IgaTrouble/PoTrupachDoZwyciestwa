@@ -1,0 +1,7 @@
+package app.Model;
+
+public class Testy {
+	private Integer idt;
+	private String kursant;
+	private String data_testu; 
+}

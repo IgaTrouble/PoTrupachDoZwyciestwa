@@ -31,6 +31,7 @@ create table pytania(
 create table testy(
 	idt integer primary key auto_increment,
     kursant varchar(100),
+    data_testu date,
     foreign key (kursant) references loginy(email)
 );
 
