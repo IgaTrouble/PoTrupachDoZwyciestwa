@@ -42,7 +42,7 @@ public class PytaniaController {
     private Button btnZamknij;
 
     @FXML
-    private TextField tfPytanie; // coś
+    private TextField tfPytanie;
 
     @FXML
     private TextField tfOdp1;
