@@ -2,6 +2,7 @@ INDEX VERSION 1.130+C:\Users\Hipo\Desktop\ProjektAnkieta\PoTrupachDoZwyciestwa\.
 1924480154.index
 2075892729.index
 1056031855.index
+379891662.index
 1654674800.index
 2725125150.index
 57806219.index

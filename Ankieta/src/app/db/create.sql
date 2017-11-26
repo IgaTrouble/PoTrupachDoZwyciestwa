@@ -6,8 +6,9 @@ create table loginy(
     email varchar(100) primary key,
     imie varchar(50),
     nazwisko varchar(50),
-    gurpa varchar(50),
-    pass varchar(20)
+    grupa varchar(50),
+    pass varchar(20),
+    typ varchar(20)
 );
 
 create table zakresy(
@@ -16,7 +17,7 @@ create table zakresy(
 );
 
 create table pytania(
-	idp integer primary key,
+	idp integer primary key auto_increment,
     zakres varchar(10),
     pytanie varchar(100),
     odp1 varchar(100),
@@ -28,18 +29,23 @@ create table pytania(
 );
 
 create table testy(
-	idt integer,
+	idt integer primary key auto_increment,
     kursant varchar(100),
     foreign key (kursant) references loginy(email)
 );
 
 create table odpowiedzi(
-	ido integer primary key,
+	ido integer primary key auto_increment,
+    test integer,
 	pytanie integer,
     odpowiedz integer,
-    foreign key (pytanie) references pytania(idp)
+    foreign key (pytanie) references pytania(idp),
+    foreign key (test) references testy(idt)
 );
 
+drop table pytania;
 drop table odpowiedzi;
 drop table testy;
-drop table kursanci;
+drop table loginy;
+
+insert into loginy(email,imie,nazwisko,grupa,pass,typ) values ('admin','Admin','Admin','ADMIN','admin','EGZAMINATOR');
